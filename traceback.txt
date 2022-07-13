@@ -1,0 +1,82 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 28, in script
+    call screen SelectKeyword()
+  File "renpy/common/000statements.rpy", line 609, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/script/select-keyword.rpy", line 11, in execute
+    screen SelectKeyword():
+  File "game/script/select-keyword.rpy", line 11, in execute
+    screen SelectKeyword():
+  File "game/script/select-keyword.rpy", line 12, in execute
+    frame:
+  File "game/script/select-keyword.rpy", line 18, in execute
+    vbox:
+  File "game/script/select-keyword.rpy", line 20, in execute
+    hbox:
+  File "game/script/select-keyword.rpy", line 22, in execute
+    textbutton 'Chloea' style 'word_list':
+  File "game/script/select-keyword.rpy", line 22, in keywords
+    textbutton 'Chloea' style 'word_list':
+  File "game/script/select-keyword.rpy", line 23, in <module>
+    action [SetVariable('chloePoin', chloePoin + 1), Call(SelectKeywordSecond())]
+NameError: name 'SelectKeywordSecond' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 28, in script
+    call screen SelectKeyword()
+  File "C:\Users\badru\Downloads\Programs\renpy-8.0.0-sdk\renpy\ast.py", line 2212, in execute
+    self.call("execute")
+  File "C:\Users\badru\Downloads\Programs\renpy-8.0.0-sdk\renpy\ast.py", line 2200, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\badru\Downloads\Programs\renpy-8.0.0-sdk\renpy\statements.py", line 281, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 609, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\badru\Downloads\Programs\renpy-8.0.0-sdk\renpy\exports.py", line 3161, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\badru\Downloads\Programs\renpy-8.0.0-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\badru\Downloads\Programs\renpy-8.0.0-sdk\renpy\display\core.py", line 3376, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs) # type: ignore
+  File "C:\Users\badru\Downloads\Programs\renpy-8.0.0-sdk\renpy\display\core.py", line 3803, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\badru\Downloads\Programs\renpy-8.0.0-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\badru\Downloads\Programs\renpy-8.0.0-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\badru\Downloads\Programs\renpy-8.0.0-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\badru\Downloads\Programs\renpy-8.0.0-sdk\renpy\display\screen.py", line 451, in visit_all
+    callback(self)
+  File "C:\Users\badru\Downloads\Programs\renpy-8.0.0-sdk\renpy\display\core.py", line 3803, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\badru\Downloads\Programs\renpy-8.0.0-sdk\renpy\display\screen.py", line 462, in per_interact
+    self.update()
+  File "C:\Users\badru\Downloads\Programs\renpy-8.0.0-sdk\renpy\display\screen.py", line 653, in update
+    self.screen.function(**self.scope)
+  File "game/script/select-keyword.rpy", line 11, in execute
+    screen SelectKeyword():
+  File "game/script/select-keyword.rpy", line 11, in execute
+    screen SelectKeyword():
+  File "game/script/select-keyword.rpy", line 12, in execute
+    frame:
+  File "game/script/select-keyword.rpy", line 18, in execute
+    vbox:
+  File "game/script/select-keyword.rpy", line 20, in execute
+    hbox:
+  File "game/script/select-keyword.rpy", line 22, in execute
+    textbutton 'Chloea' style 'word_list':
+  File "game/script/select-keyword.rpy", line 22, in keywords
+    textbutton 'Chloea' style 'word_list':
+  File "game/script/select-keyword.rpy", line 23, in <module>
+    action [SetVariable('chloePoin', chloePoin + 1), Call(SelectKeywordSecond())]
+NameError: name 'SelectKeywordSecond' is not defined
+
+Windows-10-10.0.22000 AMD64
+Ren'Py 8.0.0.22062402
+chloe_nia 1.0
+Wed Jul 13 20:08:11 2022
